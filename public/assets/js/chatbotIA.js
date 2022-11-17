@@ -18,7 +18,7 @@ const evaluarExpresion = () => {
 
   mostrarMensaje(msg.value, "usuario");
 
-  fetch(`https://chatbot-ia-utb.herokuapp.com/api/dialogflow?queryText=${msg.value}&sessionId="abcd1234"&languageCode="es"`)
+  fetch(`https://chatbotutb.herokuapp.com/api/dialogflow?queryText=${msg.value}&sessionId="abcd1234"&languageCode="es"`)
   .then(response => response.json())
   .then(data =>{
     mostrarMensaje(data.msg, "bot")
